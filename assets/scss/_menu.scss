@@ -1,0 +1,128 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+@mixin transition-ease {
+    transition: all .5s ease-in-out;
+}
+
+
+// .menu-btn {
+//     position: fixed;
+//     right: 1rem;
+//     top: 1rem;
+//     width: 28px;
+//     height: 20px;
+//     z-index: 1;
+//     cursor: pointer;
+//     @include transition-ease;
+
+//     #{&}__burger {
+//         position: absolute;
+//         width: 28px;
+//         height: 3px;
+//         right: 0;
+//         top: .5rem;
+//         background-color: #fff;
+//         // display: none;
+//         @include transition-ease;
+
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             background-color: #fff;
+//             width: 22px;
+//             height: 3px;
+//             right: 0;
+//             top: -.5rem;
+//             @include transition-ease;
+//         }
+
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             background-color: #fff;
+//             width: 22px;
+//             height: 3px;
+//             right: 0;
+//             top: .5rem;
+//             @include transition-ease;
+//         }
+
+//         &.open {
+//             transform: rotate(720deg);
+//         }
+//     }
+// }
+
+@media #{$media-mobile-sm} {
+    // .menu-btn {
+    //     display: 'flex' !important;
+    //     opacity: 1;
+
+
+    //     #{&}__burger {
+    //         background-color: #1e375a;
+    //         display: flex;
+            
+    //         &::after, &::before {
+    //             background-color: #1e375a;
+    //         }
+    //     }
+    // }
+
+
+    .menu-btn {
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        width: 28px;
+        height: 20px;
+        z-index: 1;
+        cursor: pointer;
+        @include transition-ease;
+    
+        #{&}__burger {
+            position: absolute;
+            width: 28px;
+            height: 3px;
+            right: 0;
+            top: .5rem;
+            background-color: #1e375a;
+            // display: none;
+            @include transition-ease;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #1e375a;
+                width: 22px;
+                height: 3px;
+                right: 0;
+                top: -.5rem;
+                @include transition-ease;
+            }
+    
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #1e375a;
+                width: 22px;
+                height: 3px;
+                right: 0;
+                top: .5rem;
+                @include transition-ease;
+            }
+    
+            &.open {
+                transform: rotate(720deg);
+            }
+        }
+    }
+    // .menu-btn .menu-btn__burger {
+    //     background-color: #1e375a;
+    //     display: flex;
+        
+    //     &::after, &::before {
+    //         background-color: #1e375a;
+    //     }
+    // }
+}
